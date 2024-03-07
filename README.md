@@ -5,7 +5,7 @@ Lichess [puzzle database](https://database.lichess.org/#puzzles) available as a 
 ## How to use it:
 ```swift
 
-// install or uodate the db
+// install or update the db
 if LichessPuzzleDb.installDbIfNeeded() {
     fatalError("Lichess database could not be installed.")
 }
