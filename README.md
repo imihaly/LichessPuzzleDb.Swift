@@ -26,9 +26,9 @@ let puzzleSet3 = await LichessPuzzleDb.shared.puzzles(pageSize: 1000, offset: 10
 let puzzleSet4 = await LichessPuzzleDb.shared.puzzles(ratingRange: 1000...2000, pageSize: 200)
 
 // fetch 200 puzzles with rating between 1000 and 2000, with theme "mateIn1" or "mateIn2"
-let puzzleSet4 = await LichessPuzzleDb.shared.puzzles(ratingRange: 1000...2000,themeFilter: .any(themes: Set(["mateIn1", "mateIn2"])), pageSize: 200) 
+let puzzleSet5 = await LichessPuzzleDb.shared.puzzles(ratingRange: 1000...2000,themeFilter: .any(themes: Set(["mateIn1", "mateIn2"])), pageSize: 200) 
 
 // fetch 200 puzzles with rating between 1000 and 2000, with theme "mateIn1" and "endgame"
-let puzzleSet4 = await LichessPuzzleDb.shared.puzzles(ratingRange: 1000...2000,themeFilter: .all(themes: Set(["mateIn1", "endgame"])), pageSize: 200) 
+let puzzleSet6 = await LichessPuzzleDb.shared.puzzles(ratingRange: 1000...2000,themeFilter: .all(themes: Set(["mateIn1", "endgame"])), pageSize: 200) 
 
 ```
