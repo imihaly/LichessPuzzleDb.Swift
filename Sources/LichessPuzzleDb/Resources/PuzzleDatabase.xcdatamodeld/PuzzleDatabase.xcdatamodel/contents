@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Puzzle" representedClassName="ManagedPuzzle" syncable="YES">
+        <attribute name="fen" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="moves" attributeType="String"/>
+        <attribute name="popularity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rating" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ratingDeviation" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="themes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Theme" inverseName="puzzles" inverseEntity="Theme"/>
+        <fetchIndex name="byRating">
+            <fetchIndexElement property="rating" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Theme" representedClassName="ManagedTheme" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="puzzles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Puzzle" inverseName="themes" inverseEntity="Puzzle"/>
+    </entity>
+</model>
